@@ -1,0 +1,31 @@
+.border-box{
+	transition: 0.5s all ease;
+	position: relative;
+	width: 100px; height: 100px;
+	background: transparent;
+	border: 60px solid #40c4c8;
+	border-radius: 50%; 
+	border-image: url(../Progress90.png) 44 round round;
+}
+.border-box:hover {
+	transform: rotate(360deg);
+}
+.progress {
+	background: red url() 0 0 no-repeat;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left:-45px;
+	margin-top:-45px;
+	transition: 1s all ease;
+	border-radius: 50%;
+	width: 90px;
+	height: 90px;
+	background: #fff;
+	text-align: center;
+}
+.progress:hover {
+	transform: rotate(-360deg);
+	
+}
+	
