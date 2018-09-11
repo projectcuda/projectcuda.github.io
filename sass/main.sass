@@ -66,6 +66,7 @@ b, strong
 		float: right
 		text-align: right
 		.button-toggle
+			transition: all 0.5s ease
 			border-radius: 2px
 			text-align: right
 			display: inline-block
@@ -73,6 +74,7 @@ b, strong
 			height: 5px
 			width: 30px
 			&::after
+				transition: all 0.5s ease
 				border-radius: 2px
 				content: ''
 				display: inline-block
@@ -80,6 +82,7 @@ b, strong
 				height: 5px
 				width: 30px
 			&::before
+				transition: all 0.5s ease
 				border-radius: 2px
 				content: ''
 				display: inline-block
@@ -88,16 +91,18 @@ b, strong
 				width: 15px
 		.nav-toggle
 			transition: all 0.5s ease
-			background: #fff
-			transform: translate(200%, 0)
-			border-radius: 10px
 			a
+				margin-bottom: 3px
+				border-radius: 10px
+				transition: all 0.5s ease
+				background: #fff
 				display: block
 				width: 100%
 				padding: 10px 110px
 				color: #87509c
 				font-weight: bold
 				text-transform: uppercase
+				transform: translate(200%, 0)
 		#toggle
 			position: absolute
 			left: -100%
@@ -107,7 +112,28 @@ b, strong
 				transition: all 0.5s ease
 				margin-bottom: 190px
 				pointer-events: auto
-				transform: translate(0 , 0)
+				.nav-item1
+					transition-duration: 0.25s
+					transform: translate(0, -20px)
+				.nav-item2
+					transition-duration: 0.50s
+					transform: translate(0, -20px)
+				.nav-item3
+					transition-duration: 0.75s
+					transform: translate(0, -20px)
+				.nav-item4
+					transition-duration: 1s
+					transform: translate(0, -20px)
+				.nav-item5
+					transition-duration: 1.25s
+					transform: translate(0, -20px)
+			& ~ .toggle-container
+				.button-toggle
+					&::after
+						transform: translateY(-27px)
+					&::before
+						opacity: 0
+				
 	&-main
 		margin: 147px 0 62px
 		h1
@@ -207,7 +233,11 @@ b, strong
 			.rocket
 				transform: translate(25%, -50%)
 .slick-active
-	outline: 0
+	outline: 0 !important
+	&:focus
+		outline: 0 !important
+	&:active
+		outline: 0 !important
 .slick-next
 	padding: 66px 0px !important
 	&::before
@@ -217,6 +247,7 @@ b, strong
 	&::before
 		color: #17c2a4 !important
 .section-slider
+	padding-bottom: 125px
 	background: #e7f1f8
 	color: #3c4761
 	.slider-item
@@ -247,6 +278,69 @@ b, strong
 				background-image: url(../img/team/балтика.jpg)
 				background-position: center center
 				background-size: cover
+	.slider-header
+		padding-bottom: 80px
+		p 
+			margin-top: 25px
+		h3
+			margin: 45px 0 35px
+			font-size: 24px
+			span
+				font-size: 16px
+				color: #30bae7
+				font-weight: normal
+		h2
+			font-size: 40px
+			text-transform: uppercase
+			padding: 0
+			margin: 120px 0 0
+			line-height: 40px
+			& ~ span
+				display: inline-block
+				background: #c8d9e5
+				height: 4px
+				width: 88px
+.section-skills
+	color: #3c4761
+	background: #fff
+	padding: 120px 0 125px
+	.skills-hover
+		&:hover
+			img
+				transform: rotate(-360deg)
+			span
+				transform: rotate(360deg)
+	.skills-item
+		display: inline-block
+		&-wrap
+			position: relative
+			width: 160px
+			height: 160px
+			img
+				transition: all 0.5s ease
+			span
+				transition: all 1.25s ease
+				position: absolute
+				left: 37px
+				top: 35px
+				font-size: 50px
+	p 
+		margin: 25px 0 55px
+	h3
+		margin: 45px 0 35px
+		font-size: 20px
+	h2
+		font-size: 40px
+		text-transform: uppercase
+		padding: 0
+		line-height: 40px
+		& ~ span
+			display: inline-block
+			background: #c8d9e5
+			height: 4px
+			width: 88px
+
+
 
 
 
